@@ -27,8 +27,7 @@ $ns queue-limit $n0 $n2 5
 $ns queue-limit $n2 $n4 3
 $ns queue-limit $n2 $n6 2
 $ns queue-limit $n5 $n2 5
-#The below code is used to connect between the ping agents to the node n0,
-#n4 , n5 and n6.
+
 set ping0 [new Agent/Ping]
 $ns attach-agent $n0 $ping0
 set ping4 [new Agent/Ping]
@@ -45,9 +44,7 @@ $ping0 set class_ 1
 $ping5 set class_ 2
 $ns connect $ping0 $ping4
 $ns connect $ping5 $ping6
-#Define a 'recv' function for the class 'Agent/Ping'
-#The below function is executed when the ping agent receives a reply from
-the destination
+
 Agent/Ping instproc recv {from rtt} {
 $self instvar node_
 puts " The node [$node_ id] received an reply from $from with round trip
@@ -61,7 +58,7 @@ close $tf
 close $nf
 exit 0
 }
-#Schedule events
+
 $ns at 0.1 "$ping0 send"
 $ns at 0.2 "$ping0 send"
 $ns at 0.3 "$ping0 send"
