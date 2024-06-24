@@ -1,0 +1,6 @@
+vdd vdd 0 dc 2.5
+vss gnd 0 dc 0
+vin vin pulse(0 2.5 0 1n 1n 10n 20n)
+.tran 0 200n
+.dc vin 0 2.5 1n
+.include path
