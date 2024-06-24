@@ -1,0 +1,7 @@
+vdd vdd 0 DC 5
+va A 0 DC pwl 10n 0 20n 5 50n 5 60n 0 90n 0 100n 5 130n 5 140n 0 170n 0 180n 5
+vb B 0 DC pwl 10n 0 20n 5 100n 5 110n 0
+.measure tran tf trig v(AB) val=4.5 fall=1 td=4ns targ v(AB) val=0.5 fall= 1
+.measure tran tf trig v(AB) val=0.5 rise=1 td=4ns targ v(AB) val=4.5 rise= 1
+.tran 200n
+.include c:\electric\C5_models.txt
