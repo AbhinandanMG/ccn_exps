@@ -53,7 +53,7 @@ $ns attach-agent $n1 $udp1
 
 set udp2 [new Agent/UDP]
 $udp2 set class_ 3
-$ns attach-agent $n1 $udp2
+$ns attach-agent $n4 $udp2
 
 set cbr1 [new Application/Traffic/CBR]
 $cbr1 set packetSize_ 500
