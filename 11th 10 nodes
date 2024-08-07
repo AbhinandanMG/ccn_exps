@@ -42,12 +42,6 @@ $ns duplex-link $n8 $n9 10Mb 10ms DropTail
 $ns duplex-link $n9 $n4 10Mb 10ms DropTail
 $ns duplex-link $n9 $n2 10Mb 10ms DropTail
 
-#$ns duplex-link-op $n0 $n1 orient right
-#$ns duplex-link-op $n1 $n2 orient down
-#$ns duplex-link-op $n2 $n3 orient left
-#$ns duplex-link-op $n3 $n0 orient up
-#$ns duplex-link-op $n0 $n2 orient right-down
-#$ns duplex-link-op $n1 $n3 orient left-down
 $ns cost $n0 $n1 1
 $ns cost $n1 $n2 4
 $ns cost $n2 $n3 1
