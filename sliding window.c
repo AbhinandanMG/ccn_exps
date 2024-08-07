@@ -46,10 +46,10 @@ void selective(){
 	
 	int sender(){
 		int i;
-		printf("\n Enter teh no. of frames to be sent:");
+		printf("\n Enter the no. of frames to be sent:");
 		scanf("%d",&n);
 		for(i=1;i<=n;i++){
-			printf("\nEnter data for frames[%d]",i);
+			printf("\nEnter data for frames[%d]: ",i);
 			scanf("%d",&frm[i].data);
 			frm[i].ack='y';
 		}
@@ -70,7 +70,7 @@ void selective(){
 		printf("\nResending frame %d",r);
 		sleep(2);
 		frm[r].ack = 'y';
-		printf("\nThe received frame is %d",frm[r].data);
+		printf("\nReceived data of frame %d is %d",r,frm[r].data);
 	}
 	
 	void resend_gb(){
